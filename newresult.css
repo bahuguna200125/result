@@ -1,0 +1,25 @@
+ table{
+    border: 2px solid rgb(182,179, 179);
+
+    text-align: center;
+    width: 50%;
+    
+}
+#btn{
+ margin-top: 3%;  
+  
+}
+
+    
+#per{
+    text-align:left;
+
+}
+#result{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+table tr td {
+border: 1px solid rgb(0, 0, 0);
+}

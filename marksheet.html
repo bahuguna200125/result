@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+    <form method="post" action="marksaction.php">
+   <div id="heading"> <h2>STUDENT MARKSHEET</h2><br>
+</div>
+<div id="info">STUDENT INFORMATION
+<table>
+<tr>
+    <th>Name :</th>
+    <td><input type="text"
+    name="fname" id="fname"></td>
+    
+    <th>Reg. No / Roll No :</th>
+    <td><input type="text"
+    name="rollno" id="rollno"></td>
+    
+</tr><br><br>
+
+<tr>
+    <th>Father Name  :</th>
+    <td><input type="text"
+    name="faname" id="faname"></td>
+    
+    <th>Date of Birth :</th>
+    <td><input type="text"
+    name="dob" id="dob"></td>
+    
+</tr><br><br>
+<tr>
+    <th>Institute Name :</th>
+    <td><input type="text"
+    name="iname" id="iname"></td>
+    
+    <th>Batch :</th>
+    <td><input type="text"
+    name="batch" id="batch"></td>
+</table>
+</div>
+    <div id="marks"> <h3>SUBJECTS MARKS</h3>
+    <table>
+        <tr>
+     <th>SR. NO.</th>
+     <th>SUBJECT NAME</th>
+     <th>PASSING MARKS</th>
+     <th>MARK OBTAINED</th>
+  </tr>
+  <tr>
+    <td>1.</td>
+    <td>HINDI</td>
+    <td>100/35</td>
+    <th><input type="number" id="hindi"></th>
+  </tr>
+  <tr>
+    <td>2.</td>
+    <td>ENGLISH</td>
+    <td>100/35</td>
+    <th><input type="number" id="eng"></th>
+  </tr>
+  <tr>
+    <td>3.</td>
+    <td>PHYSICS</td>
+    <td>100/35</td>
+    <th><input type="number" id="phy"></th>
+  </tr>
+
+  <tr>
+    <td>4.</td>
+    <td>MATHS</td>
+    <td>100/35</td>
+    <th><input type="number" id="math"></th>
+  </tr>
+
+  <tr>
+    <td>5.</td>
+    <td>CHEMISTRY</td>
+    <td>100/35</td>
+    <th><input type="number" id="che"></th>
+  </tr>
+ </table>
+</div>
+  <button
+  onclick="submit()"  class="btn">SUBMIT</button>
+</table>
+</form>
+</body>
+</html>

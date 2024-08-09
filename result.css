@@ -1,0 +1,32 @@
+#heading{
+text-align: center;
+}
+#info{
+border: 2px solid rgb(182, 179, 179);
+margin: 30px;
+font-weight: bold;
+padding: 3%;
+
+}
+table{
+    width: 100%;
+}
+table,th,td{
+    text-align: left;
+
+}
+#marks{
+    border: 2px solid rgb(182, 179, 179);
+    margin: 30px;
+    font-weight: bold;
+    padding:3% ;
+}
+#marks input{
+    width: 50px;
+}
+.btn{
+    background-color: lightgray;
+    font-weight: bolder;
+    padding: 7px;
+    
+}
