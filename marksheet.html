@@ -55,39 +55,57 @@
     <td>1.</td>
     <td>HINDI</td>
     <td>100/35</td>
-    <th><input type="number" id="hindi"></th>
+    <td><input type="number" name="hin" value=""></td>
   </tr>
   <tr>
     <td>2.</td>
     <td>ENGLISH</td>
     <td>100/35</td>
-    <th><input type="number" id="eng"></th>
+    <td><input type="number"  name="eng" value=""></td>
   </tr>
   <tr>
     <td>3.</td>
     <td>PHYSICS</td>
     <td>100/35</td>
-    <th><input type="number" id="phy"></th>
+    <td><input type="number" name="phy" value=""></td>
   </tr>
 
   <tr>
     <td>4.</td>
     <td>MATHS</td>
     <td>100/35</td>
-    <th><input type="number" id="math"></th>
+    <td><input type="number"   name="math" value=""></td>
   </tr>
 
   <tr>
     <td>5.</td>
     <td>CHEMISTRY</td>
     <td>100/35</td>
-    <th><input type="number" id="che"></th>
+    <td><input type="number" name="che" value=""></td>
   </tr>
  </table>
 </div>
-  <button
-  onclick="submit()"  class="btn">SUBMIT</button>
+<button
+onclick="submit()"  class="btn">SUBMIT</button>
 </table>
+<div id="result">
+ <table>
+  <th><h3>RESULT</h3></th><br><br>
+    <tr>
+      <th>
+        TOTAL :
+        <td><input type="number" id="total" name="total" value=""></td>
+        </th>
+
+        <th>PERCENTAGE :
+        <td><input type="number" id="per" name="per" value=""></td>
+      </th>
+    </tr>
+  
+ </table>
+</div>
+
+
 </form>
 </body>
 </html>

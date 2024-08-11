@@ -117,7 +117,4 @@ function percentage($totalmarks){
 
 
 
- <!-- <?php
-//   $total=$_POST['hin']+ $_POST['eng'] + $_POST['math'] + $_POST['phy']+ $_POST['che'];
-//  echo $total;
- ?> <br> -->
+

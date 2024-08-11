@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="result.css">
 </head>
 <body>
     <div id="heading"><h2>STUDENT MARKSHEET</h2></div><br>
@@ -53,26 +54,77 @@ echo $_POST['batch']
             <th>PASSING MARKS</th>
             <th>MARK OBTAINED</th>
         </tr>
+        <tr>
+    <td>1.</td>
+    <td>HINDI</td>
+    <td>100/35</td>
+    <td><?php echo $_POST ['hin']; ?></td>
+  </tr>
+  <tr>
+    <td>2.</td>
+    <td>ENGLISH</td>
+    <td>100/35</td>
+    <td><?php echo $_POST['eng']; ?>
+    </td>
+  </tr>
+  <tr>
+    <td>3.</td>
+    <td>PHYSICS</td>
+    <td>100/35</td>
+   <td><?php echo $_POST ['phy']; ?></td>
+  </tr>
 
+  <tr>
+    <td>4.</td>
+    <td>MATHS</td>
+    <td>100/35</td>
+   <td> <?php echo $_POST['math']; ?></td>
+  </tr>
 
-
-
+  <tr>
+    <td>5.</td>
+    <td>CHEMISTRY</td>
+    <td>100/35</td>
+   <td><?php echo $_POST['che']; ?></td>
+  </tr>
     </table>
-
-
-
     </div>
+    <div id="result">
+    <table>
+  <th>RESULT</th><br>
+    <tr>
+      <th>
+        TOTAL :
+        <td> <b><?php
+ echo totalmarks($_POST);
+$total=totalmarks($_POST);
+
+
+
+ function totalmarks($arrayofsub){
+   return $arrayofsub['hin']+  $arrayofsub['eng'] +  $arrayofsub['phy'] +  $arrayofsub['math']+ $arrayofsub['che'];
+ }
+ ?></b></td> 
+</tr>
+<tr>
+        <th>PERCENTAGE :
+      <td>
+<?php
+ percentage($total);
+function percentage($totalmarks){
+
+    echo ($totalmarks/500)*100 ;
+
+    
+}?>%</b>
+</td>
+      </th>
+    </tr>
+  
+ </table>
+ </div>
+
+
 </body>
 </html>
 
-
-
-
-
-
-<?php
-echo $_POST['fname']
-?><br>
-<?php
-echo $_POST['fname']
-?><br>

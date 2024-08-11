@@ -10,6 +10,7 @@ padding: 3%;
 }
 table{
     width: 100%;
+    text-align: left;
 }
 table,th,td{
     text-align: left;
@@ -28,5 +29,11 @@ table,th,td{
     background-color: lightgray;
     font-weight: bolder;
     padding: 7px;
-    
 }
+#result{
+border: 2px solid rgb(182, 179, 179);
+margin: 30px;
+font-weight: bold;
+padding: 2%;
+}
+
