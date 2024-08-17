@@ -119,6 +119,11 @@ function percentage($totalmarks){
 }?>%</b>
 </td>
       </th>
+      <tr>
+        <th>
+          
+        </th>
+      </tr>
     </tr>
   
  </table>

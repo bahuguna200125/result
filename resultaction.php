@@ -13,25 +13,28 @@
 
 // var_dump(isset($_POST['hin']));
 
-if($_POST['hin']==""){
-    echo "please  fill marks of hindi";
-    exit;
+if($_POST['hin']<0||$_POST['hin']>100){
+   echo "Wrong Input in Hindi";
+exit;
 }
-if($_POST['eng']==""){
-    echo "please fill marks of english";  
-    exit;
+
+ 
+if($_POST['eng']<0||$_POST['eng']>100){
+    echo "Wrong Input in English";  
+exit;
 }
-if($_POST['math']==""){
-    echo "please fill marks of maths";
-    exit;
+if($_POST['math']<0||$_POST['math']>100){
+    echo "Wrong Input in Maths";
+ exit;
+
 }
-if($_POST['phy']==""){
-    echo "please fill marks of physics";
-    exit;
+if($_POST['phy']<0||$_POST['phy']>100){
+    echo "Wrong Input in Physics";
+exit;
 }
-if($_POST['che']==""){
-    echo "please fill marks of chemistry";
-    exit;
+if($_POST['che']<0||$_POST['che']>100){
+    echo "Wrong Input in Chemistry";
+exit;
 }
 ?>
     <div id="result" >
@@ -47,6 +50,7 @@ if($_POST['che']==""){
 <td>100</td>
 <td><b><?php
 echo $_POST['hin'];
+
 ?></b><br></td>
 </tr>
 <tr>
@@ -106,6 +110,36 @@ function percentage($totalmarks){
 
     
 }?>%</b>
+</td>
+</tr>
+<tr>
+<td id="per" colspan="2">PASS/FAIL/PASS WITH GRACE</td>
+    <td>
+<?php
+$fail = false;
+$fail_sub_marks = 0;
+$total_fail_sub = 0;
+
+$subjects = ['hin', 'eng', 'math', 'phy', 'che'];
+
+foreach ($subjects as $subject) {
+    if ($_POST[$subject] < 33) {
+        $fail = true;
+        $total_fail_sub++;
+        $fail_sub_marks = $_POST[$subject];
+    }
+}
+
+if ($fail) {
+    if ($total_fail_sub == 1 && $fail_sub_marks >= 25) {
+        echo "YOU'RE PASS WITH GRACE";
+    } else {
+        echo "YOU'RE FAIL";
+    }
+} else {
+    echo "YOU'RE PASS";
+}
+?>
 </td>
 </tr>
 

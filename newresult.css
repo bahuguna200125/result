@@ -13,8 +13,14 @@
     
 #per{
     text-align:left;
-
 }
+    #passfail{
+
+        text-align: left;
+    }
+
+
+
 #result{
     display: flex;
     align-items: center;
