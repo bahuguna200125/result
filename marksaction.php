@@ -160,8 +160,7 @@ if ($_POST['eng']<35) {
   $total_fail_sub=$total_fail_sub+ 1;
   $fail_sub_marks=$_POST['eng'];
 }
-if ($_POST['phy']<35) {
-  $fail=true;
+if ($_POST['phy']<35) { $fail=true;
   $total_fail_sub=$total_fail_sub+1;
   $fail_sub_marks=$_POST['phy'];
 }

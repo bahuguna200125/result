@@ -9,10 +9,11 @@
 <body>
 <?php
 
-// echo $_POST['hin'];
-
-// var_dump(isset($_POST['hin']));
-
+$conn = new mysqli("localhost", "amit", "amit","users");
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
 if($_POST['hin']<0||$_POST['hin']>100){
    echo "Wrong Input in Hindi";
 exit;
@@ -40,46 +41,58 @@ exit;
     <div id="result" >
 <table>
         <tr>
+           
             <th>SUBJECT</th>
             <th>TOTAL MARKS</th>
             <th> MARKS OBTAINED</th>
         </tr>
 
         <tr>
+
 <td>Hindi</td>
 <td>100</td>
 <td><b><?php
-echo $_POST['hin'];
 
+ $hindi =$_POST['hin'];
+ echo $hindi ;
 ?></b><br></td>
 </tr>
 <tr>
+   
     <td>English</td>
     <td>100</td>
     <td><b><?php
-echo $_POST['eng'];
+
+$english =$_POST['eng'];
+echo $english;
 ?><br></td>
 </tr> 
 
 <tr>
+    
     <td>Maths</td>
     <td>100</td>
     <td><b><?php
-echo $_POST['math'];
+$maths= $_POST['math'];
+echo $maths;
 ?></b><br></td>
 </tr>
 <tr>
+    
     <td>Physics</td>
     <td>100</td>
     <td><b><?php
-echo $_POST['phy'];
+ $physics =$_POST['phy'];
+echo $physics;
 ?></b><br></td>
 </tr>
 <tr>
+    
     <td>Chemistry</td>
     <td>100</td>
     <td> <b><?php
-echo $_POST['che'];
+$chemistry= $_POST['che'];
+echo $chemistry;
 ?><br></td>
 </tr><br><br>
 <tr>
@@ -94,8 +107,7 @@ $total=totalmarks($_POST);
  function totalmarks($arrayofsub){
    return $arrayofsub['hin']+  $arrayofsub['eng'] +  $arrayofsub['math'] +  $arrayofsub['phy']+ $arrayofsub['che'];
  }
- ?></b></td> 
-</tr>
+ ?></b></td>
 <tr>
 
     <td id="per" colspan="2">PERCENTAGE</td>
@@ -139,10 +151,25 @@ if ($fail) {
 } else {
     echo "YOU'RE PASS";
 }
+
 ?>
 </td>
 </tr>
 
+<tr>
+<td></td>
+<td>USER ID</td>
+<<td><b><?php
+$id= $_POST['user'];
+echo $id;
+
+?></b><br></td> 
+</tr> 
+<?php
+$sql= "INSERT INTO user_result(`user_id` ,`hindi`, `english`, `maths`,`physics`,`chemistry`) VALUES ('{$id}','{$hindi}','{$english}','{$maths}','{$physics}','{$chemistry}')";
+$conn->query($sql);
+
+?>
     </table>
     </div>
 
